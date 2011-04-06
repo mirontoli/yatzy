@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Hjälpfil och logg</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <p>Denna tabellen visar klassnamn på rader och kolumner. För att hitta en cell måste man hitta två klasser.
+        På det sättet kan man unik-identifiera varje cell.</p>
+        <table id="resultTable">
+            <!-- Alla celler ska gå att identifieras med hjälp av class -
+            vertikalt och horisontellt - som i schack -->
+            <caption>Yatzy spel</caption>
+            <thead id="gamersnames">
+                <tr>
+                    <!-- scope är bara för tydlighetens skull -->
+                    <th scope="col" id="faceDescription"></th>
+                    <th scope="col" class="thPlayer">player1</th>
+                    <th scope="col" class="thPlayer">player2</th>
+                    <th scope="col" class="thPlayer">player3</th>
+                    <th scope="col" class="thPlayer">player4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="aces faceName">aces</td>
+                    <td class="aces player1"></td>
+                    <td class="aces player2"></td>
+                    <td class="aces player3"></td>
+                    <td class="aces player4"></td>
+                </tr>
+                <tr>
+                    <td class="twos faceName">twos</td>
+                    <td class="twos player1"></td>
+                    <td class="twos player2"></td>
+                    <td class="twos player3"></td>
+                    <td class="twos player4"></td>
+                </tr>
+                <tr>
+                    <td class="threes faceName">threes</td>
+                    <td class="threes player1"></td>
+                    <td class="threes player2"></td>
+                    <td class="threes player3"></td>
+                    <td class="threes player4"></td>
+                </tr>
+                <tr>
+                    <td class="fours faceName">fours</td>
+                    <td class="fours player1"></td>
+                    <td class="fours player2"></td>
+                    <td class="fours player3"></td>
+                    <td class="fours player4"></td>
+                </tr>
+                <tr>
+                    <td class="fives faceName">fives</td>
+                    <td class="fives player1"></td>
+                    <td class="fives player2"></td>
+                    <td class="fives player3"></td>
+                    <td class="fives player4"></td>
+                </tr>
+                <tr>
+                    <td class="sixes faceName">sixes</td>
+                    <td class="sixes player1"></td>
+                    <td class="sixes player2"></td>
+                    <td class="sixes player3"></td>
+                    <td class="sixes player4"></td>
+                </tr>
+                <tr>
+                    <td class="upperSum faceName">upperSum</td>
+                    <td class="upperSum player1"></td>
+                    <td class="upperSum player2"></td>
+                    <td class="upperSum player3"></td>
+                    <td class="upperSum player4"></td>
+                </tr>
+                <tr>
+                    <td class="bonus faceName">bonus</td>
+                    <td class="bonus player1"></td>
+                    <td class="bonus player2"></td>
+                    <td class="bonus player3"></td>
+                    <td class="bonus player4"></td>
+                </tr>
+                <tr>
+                    <td class="onePair faceName">onePair</td>
+                    <td class="onePair player1"></td>
+                    <td class="onePair player2"></td>
+                    <td class="onePair player3"></td>
+                    <td class="onePair player4"></td>
+                </tr>
+                <tr>
+                    <td class="twoPair faceName">twoPair</td>
+                    <td class="twoPair player1"></td>
+                    <td class="twoPair player2"></td>
+                    <td class="twoPair player3"></td>
+                    <td class="twoPair player4"></td>
+                </tr>
+                <tr>
+                    <td class="threeOfAKind faceName">threeOfAKind</td>
+                    <td class="threeOfAKind player1"></td>
+                    <td class="threeOfAKind player2"></td>
+                    <td class="threeOfAKind player3"></td>
+                    <td class="threeOfAKind player4"></td>
+                </tr>
+                <tr>
+                    <td class="fourOfAKind faceName">fourOfAKind</td>
+                    <td class="fourOfAKind player1"></td>
+                    <td class="fourOfAKind player2"></td>
+                    <td class="fourOfAKind player3"></td>
+                    <td class="fourOfAKind player4"></td>
+                </tr>
+                <tr>
+                    <td class="smallStraight faceName">smallStraight</td>
+                    <td class="smallStraight player1"></td>
+                    <td class="smallStraight player2"></td>
+                    <td class="smallStraight player3"></td>
+                    <td class="smallStraight player4"></td>
+                </tr>
+                <tr>
+                    <td class="largeStraight faceName">largeStraight</td>
+                    <td class="largeStraight player1"></td>
+                    <td class="largeStraight player2"></td>
+                    <td class="largeStraight player3"></td>
+                    <td class="largeStraight player4"></td>
+                </tr>
+                <tr>
+                    <td class="fullHouse faceName">fullHouse</td>
+                    <td class="fullHouse player1"></td>
+                    <td class="fullHouse player2"></td>
+                    <td class="fullHouse player3"></td>
+                    <td class="fullHouse player4"></td>
+                </tr>
+                <tr>
+                    <td class="chance faceName">chance</td>
+                    <td class="chance player1"></td>
+                    <td class="chance player2"></td>
+                    <td class="chance player3"></td>
+                    <td class="chance player4"></td>
+                </tr>
+                <tr>
+                    <td class="yahtzee faceName">yahtzee</td>
+                    <td class="yahtzee player1"></td>
+                    <td class="yahtzee player2"></td>
+                    <td class="yahtzee player3"></td>
+                    <td class="yahtzee player4"></td>
+                </tr>
+                <tr id="trSum">
+                    <td class="lowerSum faceName">lowerSum</td>
+                    <td class="lowerSum player1"></td>
+                    <td class="lowerSum player2"></td>
+                    <td class="lowerSum player3"></td>
+                    <td class="lowerSum player4"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

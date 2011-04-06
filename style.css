@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* Anatoly Mironov, M09K0272
+    20100206
+    Uppgift 1
+    MAH DA123A
+*/
+
+/* allmänt, gällande hela sidan */
+html {
+    /*height:100%;*/
+}
+body {
+    font-size:10pt;
+    font-family:Verdana, sans-serif;
+    height:100%;
+}
+img {
+    border:none;
+}
+/* HEADINGS */
+h1 {
+    text-align:center;
+}
+/* COLUMNS & DIVS */
+div#leftColumn {
+    /* för info, uppdykande text om spelregler (js), validering med mera */
+    width:15em;
+    height:100%;
+    float:left;
+    margin-right:2em;
+}
+div#faceDescriptionOuter {
+    background-color: #eef0eb;
+    border: 1px dotted #B7C4D3;
+    margin-bottom:2em;
+    min-height:20em;
+    padding:0.5em;
+}
+div#faceDescription {
+    font-size:1.2em;
+    font-family:monospace;
+    vertical-align: middle;
+}
+div#author {
+
+}
+div#validate {
+
+}
+div#centerColumn {
+    float:left;
+}
+div#rightColumn {
+    float:left;
+    margin-left:2em;
+
+}
+div#communicationScreen {
+    width:20em;
+    min-height:10em;
+    background-color:#eef0eb; /* konstruktionsramar */
+    border-style:outset;
+    padding:0.5em;
+    text-align: center;
+    font-family:monospace;
+    font-size:1.2em;
+}
+/* TABLE */
+table#resultTable {
+    /*width:60em; bestäms av kolumnernas bredd*/
+    border-collapse:collapse; /*lite buggigt i Firefox*/
+    /*border-spacing:0;*/
+}
+table#resultTable, table#resultTable th, table#resultTable td {
+    border:1px solid gray;
+}
+th.faceName {
+    width:10em;
+}
+th.player1, th.player2, th.player3, th.player4 {
+    width:2em;
+}
+tr.lowerSum {
+    font-weight:bold;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+}
+td.player1, td.player2, td.player3, td.player4 {
+    text-align:right;
+}
+
+/* När en spelare spelar så visas den aktuella kolumnen */
+th.emphasized, td.emphasized {
+    background-color:#93c4ff;
+    font-weight:bold;
+}
+/* När ett element är klickbart visas muspekaren som en hand */
+img.clickable, td.clickable {
+    cursor:pointer;
+}
+/* GAME */
+img.dice {
+
+}
+div#imgDice {
+    margin-top:2em;
+}
+input[type=button] {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:2em;
+    background-color: #333333;
+    color:white;
+    padding:0.2em;
+}
+input[type=button]:hover {
+    color:red;
+}
+

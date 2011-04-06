@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Anatoly Mironov, M09K0272, 20100206, MAH DA123A - Webprogrammering. Upppgift 1 -->
+<!-- Använt skandinaviska Yatzy som mall. en.wikipedia.org/wiki/Yatzy -->
+<!-- Sidan är uppbyggt med tre kolumner
+    - leftColumn (info, validering)
+    - centerColumn (resultattabellen)
+    - rightColumn (själva tärningskastet)
+-->
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Yatzy</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        
+        <script type="text/javascript" src="js/yatzy.js"></script>
+        
+        <script type="text/javascript" src="js/lib.js"></script>
+        <!-- mitt lilla js-bibliotek för att hantera vissa allmänna uppgifter -->
+
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+
+    <body>
+        <h1>Yatzy</h1>
+        <div id="leftColumn">
+            <div id="faceDescriptionOuter">
+                <h3>Regler</h3>
+                <div id="faceDescription">Klicka på tabellen</div>
+            </div>
+            
+            <div id="author">Anatoly Mironov, M09K0272</div>
+            
+            <div id="validate">
+                <a href="http://validator.w3.org/check?uri=referer"><img
+                        src="http://www.w3.org/Icons/valid-html401-blue"
+                        alt="Valid HTML 4.01 Strict" height="31" width="88"></a><br>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+                </a>
+            </div>
+        </div>
+        <div id="settings">
+            <label for="selectPlayer">Antal spelare</label>
+            <select id="selectPlayer" name="selectPlayer">
+                <option value="0">
+                    Välj
+                </option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+                <option value="4">
+                    4
+                </option>
+            </select>
+        </div>
+        <div id="centerColumn">
+            <table id="resultTable">
+                <!-- Alla celler ska gå att identifieras med hjälp av class -
+                    vertikalt och horisontellt - som i schack -->
+                <caption>Yatzy spel</caption>
+                <thead id="gamersnames">
+                    <tr>
+                        <!-- scope är bara för tydlighetens skull -->
+                        <th scope="col" class="header faceName"></th>
+                        <th scope="col" class="header player1">1</th>
+                        <th scope="col" class="header player2">2</th>
+                        <th scope="col" class="header player3">3</th>
+                        <th scope="col" class="header player4">4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="aces faceName">Ettor</td>
+                        <td class="aces player1"></td>
+                        <td class="aces player2"></td>
+                        <td class="aces player3"></td>
+                        <td class="aces player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="twos faceName">Tvåor</td>
+                        <td class="twos player1"></td>
+                        <td class="twos player2"></td>
+                        <td class="twos player3"></td>
+                        <td class="twos player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="threes faceName">Treor</td>
+                        <td class="threes player1"></td>
+                        <td class="threes player2"></td>
+                        <td class="threes player3"></td>
+                        <td class="threes player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="fours faceName">Fyror</td>
+                        <td class="fours player1"></td>
+                        <td class="fours player2"></td>
+                        <td class="fours player3"></td>
+                        <td class="fours player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="fives faceName">Femmor</td>
+                        <td class="fives player1"></td>
+                        <td class="fives player2"></td>
+                        <td class="fives player3"></td>
+                        <td class="fives player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="sixes faceName">Sexor</td>
+                        <td class="sixes player1"></td>
+                        <td class="sixes player2"></td>
+                        <td class="sixes player3"></td>
+                        <td class="sixes player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="upperSum faceName">Summa</td>
+                        <td class="upperSum player1"></td>
+                        <td class="upperSum player2"></td>
+                        <td class="upperSum player3"></td>
+                        <td class="upperSum player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="bonus faceName">Bonus</td>
+                        <td class="bonus player1"></td>
+                        <td class="bonus player2"></td>
+                        <td class="bonus player3"></td>
+                        <td class="bonus player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="onePair faceName">1 par</td>
+                        <td class="onePair player1"></td>
+                        <td class="onePair player2"></td>
+                        <td class="onePair player3"></td>
+                        <td class="onePair player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="twoPair faceName">2 par</td>
+                        <td class="twoPair player1"></td>
+                        <td class="twoPair player2"></td>
+                        <td class="twoPair player3"></td>
+                        <td class="twoPair player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="threeOfAKind faceName">Tretal</td>
+                        <td class="threeOfAKind player1"></td>
+                        <td class="threeOfAKind player2"></td>
+                        <td class="threeOfAKind player3"></td>
+                        <td class="threeOfAKind player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="fourOfAKind faceName">Fyrtal</td>
+                        <td class="fourOfAKind player1"></td>
+                        <td class="fourOfAKind player2"></td>
+                        <td class="fourOfAKind player3"></td>
+                        <td class="fourOfAKind player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="smallStraight faceName">Liten straight</td>
+                        <td class="smallStraight player1"></td>
+                        <td class="smallStraight player2"></td>
+                        <td class="smallStraight player3"></td>
+                        <td class="smallStraight player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="largeStraight faceName">Stor straight</td>
+                        <td class="largeStraight player1"></td>
+                        <td class="largeStraight player2"></td>
+                        <td class="largeStraight player3"></td>
+                        <td class="largeStraight player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="fullHouse faceName">Kåk</td>
+                        <td class="fullHouse player1"></td>
+                        <td class="fullHouse player2"></td>
+                        <td class="fullHouse player3"></td>
+                        <td class="fullHouse player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="chance faceName">Chans</td>
+                        <td class="chance player1"></td>
+                        <td class="chance player2"></td>
+                        <td class="chance player3"></td>
+                        <td class="chance player4"></td>
+                    </tr>
+                    <tr>
+                        <td class="yahtzee faceName">Yatzy</td>
+                        <td class="yahtzee player1"></td>
+                        <td class="yahtzee player2"></td>
+                        <td class="yahtzee player3"></td>
+                        <td class="yahtzee player4"></td>
+                    </tr>
+                    <tr class="lowerSum">
+                        <td class="lowerSum faceName">Summa</td>
+                        <td class="lowerSum player1"></td>
+                        <td class="lowerSum player2"></td>
+                        <td class="lowerSum player3"></td>
+                        <td class="lowerSum player4"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="rightColumn">
+            <div id="communicationScreen">
+                <!-- Här är instruktionen. Egentligen ska det vara här anvisningar i spelet.
+                    De här instruktionerna ska flyttas sen till vänster
+                    När spelaren klickar på "faces", dyker beskrivningen upp till vänster.
+                    Detta ska implementeras under Uppgift 1B -->
+                <noscript><p>För att kunna spela måste du ha <a href="http://en.wikipedia.org/wiki/Javascript">Javascript</a></p></noscript>
+                <p id="communication">Välkommen till Yatzyspelet!
+                    <br>Välj antalet spelare först
+                </p>
+            </div>
+            <div id="imgDice">
+                <img id="die0" class="dice" src="img/dice/1.png" alt="">
+                <img id="die1" class="dice" src="img/dice/2.png" alt="">
+                <img id="die2" class="dice" src="img/dice/3.png" alt="">
+                <img id="die3" class="dice" src="img/dice/4.png" alt="">
+                <img id="die4" class="dice" src="img/dice/5.png" alt="">
+            </div>
+            <input type="button" id="rollDice" name="rollDice" value="Kasta tärningar">
+        </div>
+    </body>
+</html>
