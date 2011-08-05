@@ -100,7 +100,7 @@ Game.prototype.roll = function() {
         throw "du har slösat alla dina rounds!";
     //showMessage("du har slösat alla dina rounds!");
     }
-}
+};
 Game.prototype.updateSums = function() {
     this.updateUpperSum();
     this.updateBonus();
@@ -169,10 +169,12 @@ function Face() { //en allmän prototyp -typ superklass
     this.potential = 0; // för att eventuellt visa möjliga resultat vid mouseover
     this.reported = false;
 }
-Face.prototype.report = function() {
-    this.score = this.potential;
-    this.potential = 0;
-    this.reported = true;
+Face.prototype.prototype = { 
+    report: function() {
+        this.score = this.potential;
+        this.potential = 0;
+        this.reported = true;
+    }
 }
 
 //helpers
