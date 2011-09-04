@@ -23,12 +23,12 @@ Match.prototype.getANewGamesArray = function(quantityOfPlayers) {
         //i+1 för att det räknas från 1 i tabellen.
     }
     return gamesArray;
-}
+};
 Match.prototype.toggleGames = function() {
     currentGame = this.games[this.gamesArrayIndex];
     // update index: +1 och resten av modulooperator av antalet spelare
     this.gamesArrayIndex = ++this.gamesArrayIndex % this.quantityOfPlayers;
-}
+};
 function Game(nr, name) {
     this.playerNr = nr;
     this.playerName = name;
