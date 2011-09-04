@@ -36,7 +36,7 @@ function Game(nr, name) {
     this.upperSum = 0;
     this.bonus = 0;
     this.lowerSum = 0;
-    this.rounds = new Array();
+    this.rounds = [];
 
     this.faceArray = new Array();
     //upper section
