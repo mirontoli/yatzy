@@ -48,7 +48,7 @@ function Game(nr, name) {
     this.faceArray["sixes"] = new Sixes();
 
     //lower section
-    this.faceArray["onePair"] = new OnePair();
+    this.faceArray.onePair = new OnePair();
     this.faceArray["twoPair"] = new TwoPair();
     this.faceArray["threeOfAKind"] = new ThreeOfAKind();
     this.faceArray["fourOfAKind"] = new FourOfAKind();
