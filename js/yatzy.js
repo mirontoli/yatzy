@@ -105,7 +105,7 @@ Game.prototype.updateSums = function() {
     this.updateUpperSum();
     this.updateBonus();
     this.updateLowerSum();
-}
+};
 Game.prototype.updateUpperSum = function() {
     this.upperSum =
     this.faceArray["aces"].face.score
@@ -122,7 +122,7 @@ Game.prototype.updateBonus = function() {
 }
 Game.prototype.updateLowerSum = function() {
     this.lowerSum = this.upperSum 
-    + this.bonus// + alla andra
+    + this.bonus
     + this.faceArray["onePair"].face.score
     + this.faceArray["twoPair"].face.score
     + this.faceArray["threeOfAKind"].face.score
